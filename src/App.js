@@ -1,5 +1,5 @@
 import React from "react";
-import "../public/styles.css";
+import "./styles.css";
 import Forecast from "./Forecast";
 import Search from "./Search";
 import Footer from "./Footer";
