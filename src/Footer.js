@@ -7,7 +7,9 @@ export default function Footer() {
         <a href="https://github.com/elza-s/Weather-App-React" target="_blank" rel="noreferrer">
           Open source code
         </a>
+        <span>
           by Elza Somu
+        </span> 
       </p>
     </div>
   );
