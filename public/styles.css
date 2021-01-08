@@ -1,0 +1,106 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+body {
+  background-color: #203354;
+  background-size: cover;
+  height: 120vh;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 90%;
+}
+
+.title {
+  margin: 0 20px;
+}
+h1 {
+  margin: 50px 0 10px 0;
+  /* padding-bottom: 10px; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  padding-top: 20px;
+  font-size: 20px;
+}
+
+.fahrenheit {
+  margin: 50px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 70px;
+  text-align: end;
+  cursor: pointer;
+}
+
+.main {
+  border: 2px solid white;
+  padding: 10px 10px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mainWeather {
+  width: 150px;
+  margin: 20px;
+}
+.current {
+  border: 2px solid white;
+  padding: 50px 20px;
+  margin-bottom: 10px;
+}
+
+.city {
+  font-size: 50px;
+}
+
+.dateTime h3 {
+  font-size: 18px;
+  color: #e5ebed;
+}
+
+.forecast {
+  border: 2px solid white;
+  padding: 30px 20px;
+}
+
+.currentTemp {
+  font-size: 30px;
+  color: #f9c548;
+  line-height: 1;
+}
+
+.city,
+.fahrenheit {
+  color: #6abce6;
+}
+
+.search,
+.location {
+  font-size: 30px;
+}
+
+.temp {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.date {
+  color: #ebaa50;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.smallSun {
+  width: 100px;
+}
