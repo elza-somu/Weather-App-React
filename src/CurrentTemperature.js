@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate"
 import "./CurrentTemperature.css";
 import axios from 'axios'
 
 export default function CurrentTemperature(props) {
   const[apiData, setApiData] = useState({ready:false});
   function handleResponse(response) {
+    
     console.log(response.data)
     setApiData({
       ready :true,
@@ -12,7 +14,7 @@ export default function CurrentTemperature(props) {
       realFeel: response.data.main.feels_like,
       city : response.data.name,
       description: response.data.weather[0].description,
-      date:"date",
+      date: new Date(response.data.dt * 1000),
       icon:"dfsd"
     });
   }
@@ -26,7 +28,9 @@ export default function CurrentTemperature(props) {
             <p>{apiData.icon}</p>
           </div>
           <div className="col-12 ">
-            <h3>{apiData.date}</h3>
+            <h3>
+              <FormattedDate date = {apiData.date} />
+            </h3>
           </div>
         </div>
   
