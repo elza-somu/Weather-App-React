@@ -73,12 +73,6 @@ h3 {
   padding: 30px 20px;
 }
 
-.currentTemp {
-  font-size: 30px;
-  color: #f9c548;
-  line-height: 1;
-}
-
 .city,
 .fahrenheit {
   color: #6abce6;
