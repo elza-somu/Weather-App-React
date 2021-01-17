@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CurrentTemperature.css";
 import axios from 'axios'
 
-export default function CurrentTemperature() {
+export default function CurrentTemperature(props) {
   const[apiData, setApiData] = useState({ready:false});
   function handleResponse(response) {
     console.log(response.data)
@@ -45,8 +45,7 @@ export default function CurrentTemperature() {
     );
   } else{
     const apiKey = "c859cc5005db2af23ee315e1d40f88f0"
-    let city = "Toronto"
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     return "Loading . . ."
   }

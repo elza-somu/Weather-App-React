@@ -8,7 +8,7 @@ import CurrentTemperature from "./CurrentTemperature";
 export default function App() {
   return (
     <div className="App container">
-      <CurrentTemperature />
+      <CurrentTemperature defaultCity = "Toronto" />
       <Search />
       <Forecast />
       <Footer />
