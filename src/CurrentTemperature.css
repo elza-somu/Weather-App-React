@@ -6,6 +6,18 @@
   height: 70px;
 }
 
+.date {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.date,
+.description,
+.wind {
+  margin: 5px;
+  /* line-height: 1; */
+}
+
 .timeDate {
   margin: 0;
 }
@@ -14,4 +26,10 @@
   font-size: 50px;
   color: #f9c548;
   margin-right: 40px;
+}
+
+.realfeel {
+  color: white;
+  font-size: 16px;
+  line-height: 1;
 }
