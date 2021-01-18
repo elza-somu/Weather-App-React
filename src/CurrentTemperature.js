@@ -7,12 +7,12 @@ export default function CurrentTemperature(props) {
       <div className="CurrentTemperature">
         <div className="row">
           <div class="col">
-            <h2>{props.city}</h2>
-            <p>{props.icon}</p>
+            <h2>{props.data.Reactcity}</h2>
+            <p>{props.data.icon}</p>
           </div>
           <div className="col-12 ">
             <h3>
-              <FormatDate date={props.date} />
+              <FormatDate date={props.data.date} />
             </h3>
           </div>
         </div>
@@ -20,12 +20,12 @@ export default function CurrentTemperature(props) {
         <div className="row">
           <div className="col-3 timeDate">
             <h3>10:10pm</h3>
-            <p className="text-capitalize">{props.description} </p> 
-            <p>Real Feel {Math.round(props.realFeel)}° C</p>
+            <p className="text-capitalize">{props.data.description} </p> 
+            <p>Real Feel {Math.round(props.data.realFeel)}° C</p>
           </div>
           <div className="col-6"></div>
           <div className="col currentTemp">
-            <p>{Math.round(props.temperature)}° <span>C </span>| F</p>
+            <p>{Math.round(props.data.temperature)}° <span>C </span>| F</p>
           </div>
         </div>
       </div>
