@@ -21,7 +21,6 @@ export default function CurrentTemperature(props) {
   
         <div className="row">
           <div className="col-3 timeDate">
-            <h3>10:10pm</h3>
             <p className="text-capitalize">{props.data.description} </p> 
             <p>Real Feel {Math.round(props.data.realFeel)}° C</p>
           </div>
