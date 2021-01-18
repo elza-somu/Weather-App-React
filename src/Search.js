@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Search.css";
 import axios from "axios";
 import CurrentTemperature from "./CurrentTemperature";
+import Forecast from "./Forecast";
 
 export default function Search(props) {
   const[apiData, setApiData] = useState({ready:false});
@@ -38,11 +39,12 @@ export default function Search(props) {
     return (
       <div className="Search">
         <CurrentTemperature data={apiData}/>
-          <form className="row" onSubmit={handleSubmit}>
-            <div className="col-3"></div>
-            <input className="form-control col-5" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={handleCity}/>
-            <input className="col-2"type="submit" value="Search"/>
-          </form>
+        <form className="row" onSubmit={handleSubmit}>
+          <div className="col-3"></div>
+          <input className="form-control col-5" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={handleCity}/>
+          <input className="col-1 btn btn-light" type="submit" value="Search"/>
+        </form>
+        <Forecast city={apiData.city}/>
       </div>
     );
 

@@ -26,14 +26,9 @@ const codeMapping = {
 
   return(<ReactAnimatedWeather
         icon={codeMapping[props.code]}
-        color= 'goldenrod'
+        color= 'rgb(244, 188, 145)'
         size= {64}
         animate= {true}
       />
-
-  
   )
-
-  
-  // <img src="https://raw.githubusercontent.com/divyanshu013/react-animated-weather/HEAD/react-animated-weather.gif" alt={props.alt}/>
 }

@@ -1,4 +1,10 @@
 .Forecast {
-  background-color: rgba(7, 87, 149, 0.8);
   padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.Forecast canvas {
+  display: block;
+  margin: 10px auto;
 }

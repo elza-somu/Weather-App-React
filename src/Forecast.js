@@ -1,75 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
+import ForecastPreview from "./ForecastPreview"
+import axios from "axios";
 import "./Forecast.css";
 
-export default function Forecast() {
-  return (
-    <div className="Forecast">
-      <section className="weather">
-        <h3>Forecast</h3>
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
-        <div className="row">
-          <div className="col">
-            <p>Tomorrow</p>
-          </div>
-          <div className="col">
-            <p>17 Oct</p>
-          </div>
-          <div className="col">
-            <p>18 Oct</p>
-          </div>
-          <div className="col">
-            <p>19 Oct</p>
-          </div>
-          <div className="col">
-            <p>20 Oct</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            <p>
-              <i class="fas fa-cloud-sun-rain rainCloud"></i>
-            </p>
-          </div>
-          <div className="col">
-            <p>
-              <i className="fas fa-cloud-sun-rain rainCloud"></i>
-            </p>
-          </div>
-          <div className="col">
-            <p>
-              <i className="fas fa-cloud-showers-heavy rain"></i>
-            </p>
-          </div>
-          <div className="col">
-            <p>
-              <i className="fas fa-cloud-sun cloudSun"></i>
-            </p>
-          </div>
-          <div className="col">
-            <p>
-              <i className="fas fa-cloud-showers-heavy showers"></i>
-            </p>
-          </div>
-        </div>
+  function handleForecast(response){
+    setForecast(response.data);
+    setLoaded(true);
+  }
 
-        <div className="row">
-          <div className="col">
-            <p>11°C</p>
-          </div>
-          <div className="col">
-            <p>13°C</p>
-          </div>
-          <div className="col">
-            <p>15°C</p>
-          </div>
-          <div className="col">
-            <p>10°C</p>
-          </div>
-          <div className="col">
-            <p>12°C</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+  if(loaded && props.city === forecast.city.name){
+    return (
+      <div className="Forecast row">
+        <ForecastPreview data={forecast.list[0]} />
+        <ForecastPreview data={forecast.list[1]} />
+        <ForecastPreview data={forecast.list[2]} />
+        <ForecastPreview data={forecast.list[3]} />
+        <ForecastPreview data={forecast.list[4]} />
+        <ForecastPreview data={forecast.list[5]} />
+      </div>
+    )
+  } else {
+    let apiKey ="c859cc5005db2af23ee315e1d40f88f0"
+    let url = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`
+    axios.get(url).then(handleForecast);
+    return "loading"
+  }
 }
