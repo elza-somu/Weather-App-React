@@ -15,7 +15,7 @@ export default function Search(props) {
       city : response.data.name,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
-      icon:response.data.weather[0].icon
+      icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
     });
   }
 
