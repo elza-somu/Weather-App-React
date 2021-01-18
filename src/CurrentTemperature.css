@@ -11,11 +11,7 @@
 }
 
 .currentTemp {
-  font-size: 45px;
+  font-size: 50px;
   color: #f9c548;
   margin-right: 40px;
-}
-
-.currentTemp span {
-  font-weight: bold;
 }
