@@ -7,7 +7,7 @@ export default function CurrentTemperature(props) {
       <div className="CurrentTemperature">
         <div className="row">
           <div class="col">
-            <h2>{props.data.Reactcity}</h2>
+            <h2>{props.data.city}</h2>
             <p>{props.data.icon}</p>
           </div>
           <div className="col-12 ">
