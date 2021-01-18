@@ -8,8 +8,6 @@ export default function Search(props) {
   const[city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    
-    console.log(response.data)
     setApiData({
       ready :true,
       temperature : response.data.main.temp,
@@ -17,22 +15,22 @@ export default function Search(props) {
       city : response.data.name,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
-      icon:"dfsd"
+      icon:"response.data.weather[0].icon"
     });
   }
 
   function handleSubmit(event){
     event.preventDefault();
-    alert(city)
+    search();
   }
 
-  function searchCity(event){
+  function handleCity(event){
     setCity(event.target.value);
   }
 
   function search(){
     const apiKey = "c859cc5005db2af23ee315e1d40f88f0"
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -42,7 +40,7 @@ export default function Search(props) {
         <CurrentTemperature data={apiData}/>
           <form className="row" onSubmit={handleSubmit}>
             <div className="col-3"></div>
-            <input className="form-control col-5" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={searchCity}/>
+            <input className="form-control col-5" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={handleCity}/>
             <input className="col-2"type="submit" value="Search"/>
           </form>
       </div>
