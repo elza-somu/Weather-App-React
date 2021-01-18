@@ -1,15 +1,14 @@
 import React from "react";
 import "./styles.css";
 import Forecast from "./Forecast";
-import Search from "./Search";
 import Footer from "./Footer";
 import CurrentTemperature from "./CurrentTemperature";
 
-export default function App() {
+export default function App(props) {
   return (
     <div className="App container">
-      <CurrentTemperature defaultCity = "Toronto" />
-      <Search />
+      <CurrentTemperature defaultCity="Toronto" />
+      
       <Forecast />
       <Footer />
     </div>
