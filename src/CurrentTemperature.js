@@ -18,7 +18,7 @@ export default function CurrentTemperature(props) {
         </div>
   
         <div className="row">
-          <div className="col-3">
+          <div className="col-lg-3">
             <p className="date">
               <FormatDate date={props.data.date} />
             </p>
@@ -26,8 +26,8 @@ export default function CurrentTemperature(props) {
             <p className="wind">Wind Speed: {props.data.wind} km/h </p> 
             
           </div>
-          <div className="col-6"></div>
-          <div className="col currentTemp">
+          <div className="col-lg-6"></div>
+          <div className="col-lg currentTemp">
             <TempConversion celsius={props.data.temperature}/>
             <p className="col realfeel">Real Feel {Math.round(props.data.realFeel)}° C</p>
           </div>
