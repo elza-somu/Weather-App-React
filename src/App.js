@@ -5,7 +5,7 @@ import Search from "./Search";
 
 export default function App(props) {
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       <Search defaultCity="Toronto" />
       
       

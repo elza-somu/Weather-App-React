@@ -1,9 +1,10 @@
 .Search {
-  background-color: rgba(7, 87, 149, 0.8);
+  background-image: url(./images/background.jpg);
+  background-size: cover;
   padding: 20px;
   align-items: center;
 }
 
-form {
+/* form {
   margin: 0 auto;
-}
+} */

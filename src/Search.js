@@ -40,10 +40,11 @@ export default function Search(props) {
     return (
       <div className="Search">
         <CurrentTemperature data={apiData}/>
-        <form className="row" onSubmit={handleSubmit}>
-          <div className="col-lg-3"></div>
-          <input className="form-control col-lg-5" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={handleCity}/>
-          <input className="col-lg-1 btn btn-light" type="submit" value="Search"/>
+        <form className="row m-auto" onSubmit={handleSubmit}>
+          {/* <div className="col-lg-3 m-auto "> */}
+            <input className="form-control col-lg-9 col-md-9 col-sm-9 m-auto" type="search" name="" id="search" placeholder="Search for a city" autoFocus="on" onChange={handleCity}/>
+            <input className="col-lg-1 col-md-2 col-sm-2 m-auto btn btn-light" type="submit" value="Search"/>
+          {/* </div> */}
         </form>
         <Forecast city={apiData.city}/>
       </div>

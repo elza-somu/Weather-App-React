@@ -1,3 +1,7 @@
+h2 {
+  margin-top: 60px;
+}
+
 .CurrentTemperature {
   padding: 20px;
 }
@@ -15,7 +19,6 @@
 .description,
 .wind {
   margin: 5px;
-  /* line-height: 1; */
 }
 
 .timeDate {
@@ -32,4 +35,10 @@
   color: white;
   font-size: 16px;
   line-height: 1;
+}
+
+@media only screen and (max-width: 991px) {
+  h2 {
+    margin-top: 0;
+  }
 }
