@@ -1,7 +1,9 @@
 # Weather App with React
 [![Netlify Status](https://api.netlify.com/api/v1/badges/268ef664-f449-4a73-a101-e83b845c5937/deploy-status)](https://app.netlify.com/sites/weather-radar/deploys)
 
-Weather Radar App created using React.js. OpenWeather map API has been used to pull the current and forecasted weather for the various cities
+Weather Radar App created using React.js. 
+
+OpenWeather map API has been used to pull the current and forecasted weather for the various cities
 
 ## Available Scripts
 
